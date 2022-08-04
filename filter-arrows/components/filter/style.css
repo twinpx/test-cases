@@ -1,0 +1,611 @@
+.i-ph-animated .b-prices__ph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+}
+.i-ph-animated .b-filter {
+  position: static;
+  width: auto;
+  opacity: 1;
+}
+.b-filter-btn {
+  height: 49px;
+  width: 100%;
+  background-color: #f7f7f7;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 600px) {
+  .b-filter-btn {
+    display: block;
+  }
+}
+.b-filter-btn i {
+  background-repeat: no-repeat;
+  background-position: right top;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 17px;
+}
+.b-filter-btn span {
+  display: none;
+  line-height: 49px;
+  padding-left: 12px;
+  color: #666;
+}
+.b-filter-btn span.i-show {
+  display: inline-block;
+}
+.b-filter-body {
+  background-color: #f7f7f7;
+  padding: 38px 12px;
+}
+@media (max-width: 600px) {
+  .b-filter-body {
+    display: none;
+  }
+}
+.b-filter-body label {
+  font-size: 9pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #c7c7bb;
+  display: block;
+  color: #333;
+  word-break: break-all;
+  padding-right: 75px;
+}
+.b-filter-body label:last-of-type {
+  padding-right: 0;
+}
+.b-filter-body .ui-widget {
+  font-family: 'Akrobat', 'Open Sans Condensed', Arial, sans-serif;
+}
+.b-filter-body .ui-widget.ui-widget-content {
+  height: 7px;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 0 rgba(153, 153, 153, 0.39) inset;
+  border-radius: 0;
+  border: none;
+}
+.b-filter-body .ui-state-default,
+.b-filter-body .ui-widget-content .ui-state-default,
+.b-filter-body .ui-widget-header .ui-state-default,
+.b-filter-body .ui-button,
+.b-filter-body html .ui-button.ui-state-disabled:hover,
+.b-filter-body html .ui-button.ui-state-disabled:active {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+  border: 3px solid #2577dc;
+  top: -9px;
+  margin-left: -12px;
+}
+.b-filter-body .ui-state-default:focus,
+.b-filter-body .ui-widget-content .ui-state-default:focus,
+.b-filter-body .ui-widget-header .ui-state-default:focus,
+.b-filter-body .ui-button:focus,
+.b-filter-body html .ui-button.ui-state-disabled:hover:focus,
+.b-filter-body html .ui-button.ui-state-disabled:active:focus {
+  outline: none;
+}
+.b-filter-body .ui-slider .ui-slider-range {
+  background-color: #2577dc;
+  height: 7px;
+}
+.b-filter-body .ui-slider-handle span {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  font-size: 8pt;
+  font-weight: bold;
+  width: 24px;
+  text-align: center;
+}
+.b-filter-body .ui-state-active,
+.b-filter-body .ui-widget-content .ui-state-active,
+.b-filter-body .ui-widget-header .ui-state-active,
+.b-filter-body a.ui-button:active,
+.b-filter-body .ui-button:active,
+.b-filter-body .ui-button.ui-state-active:hover {
+  color: #333;
+}
+.b-filter-table__finished {
+  vertical-align: middle;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.b-filter__input {
+  text-align: right;
+  line-height: 15px;
+  font-size: 9pt;
+  transform: translateY(19px);
+  -webkit-transform: translateY(19px);
+  -moz-transform: translateY(19px);
+  -ms-transform: translateY(19px);
+}
+.b-filter__input input[type='text']:not(.browser-default) {
+  height: 20px;
+  line-height: 20px;
+  font-size: 7pt;
+  display: inline-block;
+  width: 20px;
+  margin: 0;
+  border: none;
+  background-color: rgba(202, 187, 71, 0.867);
+  text-align: center;
+  color: #fff;
+}
+.b-filter__input
+  input[type='text']:not(.browser-default):focus:not([readonly]) {
+  border: none;
+  box-shadow: none;
+}
+.b-filter__wrapper {
+  margin-bottom: 35px;
+  height: 7px;
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 0 rgba(153, 153, 153, 0.39) inset;
+  border-radius: 4px;
+  border: none;
+  padding: 0 12px;
+}
+.b-filter-price-value {
+  font-size: 9pt;
+  margin: -32px 0 17px;
+}
+.b-filter-reset {
+  font-size: 9pt;
+  cursor: pointer;
+  margin-top: 50px;
+}
+.b-filter thead,
+.b-filter tr,
+.b-filter th {
+  background-color: #fff;
+}
+.b-filter th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-size: 7pt;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 19px;
+  cursor: pointer;
+  user-select: none;
+}
+.b-filter thead tr,
+.b-filter tbody tr {
+  border-bottom-color: #cabb47;
+}
+.b-filter tbody tr {
+  height: 65px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+}
+.b-filter tbody tr.b-filter--action {
+  color: #c00;
+}
+.b-filter tbody tr:hover {
+  background-color: #f3f2e8;
+}
+@media (max-width: 1200px) {
+  .b-filter tbody tr {
+    display: block;
+    height: auto;
+    padding-top: 15px;
+  }
+}
+.b-filter tbody td {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 12pt;
+  line-height: 1.1;
+}
+.b-filter tbody td span {
+  font-size: 8pt;
+}
+@media (min-width: 768px) {
+  .b-filter tbody td span {
+    display: none;
+  }
+}
+.b-filter tbody small {
+  font-size: 7pt;
+}
+.b-filter tbody a.btn:hover,
+.b-filter tbody a.btn:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.b-filter .col.xl9 {
+  height: 700px;
+  overflow: auto;
+}
+.b-filter-item[data-tab='highrise'] table th,
+.b-filter-item[data-tab='lowrise'] table th,
+.b-filter-item[data-tab='apartament'] table th {
+  width: 11%;
+}
+.b-filter-item[data-tab='highrise'] table th:nth-child(6),
+.b-filter-item[data-tab='lowrise'] table th:nth-child(6),
+.b-filter-item[data-tab='apartament'] table th:nth-child(6),
+.b-filter-item[data-tab='highrise'] table th:nth-child(7),
+.b-filter-item[data-tab='lowrise'] table th:nth-child(7),
+.b-filter-item[data-tab='apartament'] table th:nth-child(7),
+.b-filter-item[data-tab='highrise'] table th:nth-child(8),
+.b-filter-item[data-tab='lowrise'] table th:nth-child(8),
+.b-filter-item[data-tab='apartament'] table th:nth-child(8),
+.b-filter-item[data-tab='highrise'] table th:nth-child(9),
+.b-filter-item[data-tab='lowrise'] table th:nth-child(9),
+.b-filter-item[data-tab='apartament'] table th:nth-child(9) {
+  width: auto;
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='highrise'] table th,
+  .b-filter-item[data-tab='lowrise'] table th,
+  .b-filter-item[data-tab='apartament'] table th {
+    display: inline-block;
+    width: 20%;
+  }
+  .b-filter-item[data-tab='highrise'] table th:nth-child(6),
+  .b-filter-item[data-tab='lowrise'] table th:nth-child(6),
+  .b-filter-item[data-tab='apartament'] table th:nth-child(6),
+  .b-filter-item[data-tab='highrise'] table th:nth-child(7),
+  .b-filter-item[data-tab='lowrise'] table th:nth-child(7),
+  .b-filter-item[data-tab='apartament'] table th:nth-child(7),
+  .b-filter-item[data-tab='highrise'] table th:nth-child(8),
+  .b-filter-item[data-tab='lowrise'] table th:nth-child(8),
+  .b-filter-item[data-tab='apartament'] table th:nth-child(8),
+  .b-filter-item[data-tab='highrise'] table th:nth-child(9),
+  .b-filter-item[data-tab='lowrise'] table th:nth-child(9),
+  .b-filter-item[data-tab='apartament'] table th:nth-child(9) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='highrise'] table td,
+  .b-filter-item[data-tab='lowrise'] table td,
+  .b-filter-item[data-tab='apartament'] table td {
+    display: inline-block;
+    width: 20%;
+  }
+  .b-filter-item[data-tab='highrise'] table td:nth-child(6),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(6),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(6) {
+    padding-top: 15px;
+  }
+  .b-filter-item[data-tab='highrise'] table td:nth-child(7),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(7),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(7) {
+    font-size: 14pt;
+  }
+  .b-filter-item[data-tab='highrise'] table td:nth-child(6),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(6),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(6),
+  .b-filter-item[data-tab='highrise'] table td:nth-child(7),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(7),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(7),
+  .b-filter-item[data-tab='highrise'] table td:nth-child(8),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(8),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(8),
+  .b-filter-item[data-tab='highrise'] table td:nth-child(9),
+  .b-filter-item[data-tab='lowrise'] table td:nth-child(9),
+  .b-filter-item[data-tab='apartament'] table td:nth-child(9) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.b-filter-item[data-tab='townhouse'] table th,
+.b-filter-item[data-tab='quadhouses'] table th {
+  width: 15%;
+}
+.b-filter-item[data-tab='townhouse'] table th:nth-child(4),
+.b-filter-item[data-tab='quadhouses'] table th:nth-child(4),
+.b-filter-item[data-tab='townhouse'] table th:nth-child(5),
+.b-filter-item[data-tab='quadhouses'] table th:nth-child(5),
+.b-filter-item[data-tab='townhouse'] table th:nth-child(6),
+.b-filter-item[data-tab='quadhouses'] table th:nth-child(6),
+.b-filter-item[data-tab='townhouse'] table th:nth-child(7),
+.b-filter-item[data-tab='quadhouses'] table th:nth-child(7),
+.b-filter-item[data-tab='townhouse'] table th:nth-child(8),
+.b-filter-item[data-tab='quadhouses'] table th:nth-child(8) {
+  width: auto;
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='townhouse'] table th,
+  .b-filter-item[data-tab='quadhouses'] table th {
+    display: inline-block;
+  }
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(1),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(1),
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(2),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(2),
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(3),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(3) {
+    width: 24%;
+  }
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(4),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(4) {
+    width: 28%;
+  }
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(5),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(5),
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(6),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(6),
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(7),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(7),
+  .b-filter-item[data-tab='townhouse'] table th:nth-child(8),
+  .b-filter-item[data-tab='quadhouses'] table th:nth-child(8) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='townhouse'] table td,
+  .b-filter-item[data-tab='quadhouses'] table td {
+    display: inline-block;
+    width: 28%;
+  }
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(1),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(1),
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(2),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(2),
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(3),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(3) {
+    width: 24%;
+  }
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(5),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(5) {
+    padding-top: 15px;
+  }
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(6),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(6) {
+    font-size: 14pt;
+  }
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(5),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(5),
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(6),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(6),
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(7),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(7),
+  .b-filter-item[data-tab='townhouse'] table td:nth-child(8),
+  .b-filter-item[data-tab='quadhouses'] table td:nth-child(8) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.b-filter-item[data-tab='cottage'] table th {
+  width: 15%;
+}
+.b-filter-item[data-tab='cottage'] table th:nth-child(4),
+.b-filter-item[data-tab='cottage'] table th:nth-child(5),
+.b-filter-item[data-tab='cottage'] table th:nth-child(6),
+.b-filter-item[data-tab='cottage'] table th:nth-child(7) {
+  width: auto;
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='cottage'] table th {
+    display: inline-block;
+  }
+  .b-filter-item[data-tab='cottage'] table th:nth-child(1),
+  .b-filter-item[data-tab='cottage'] table th:nth-child(2) {
+    width: 15%;
+  }
+  .b-filter-item[data-tab='cottage'] table th:nth-child(3),
+  .b-filter-item[data-tab='cottage'] table th:nth-child(4) {
+    width: 35%;
+  }
+  .b-filter-item[data-tab='cottage'] table th:nth-child(5),
+  .b-filter-item[data-tab='cottage'] table th:nth-child(6),
+  .b-filter-item[data-tab='cottage'] table th:nth-child(7) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='cottage'] table td {
+    display: inline-block;
+    width: 35%;
+  }
+  .b-filter-item[data-tab='cottage'] table td:nth-child(1),
+  .b-filter-item[data-tab='cottage'] table td:nth-child(2) {
+    width: 15%;
+  }
+  .b-filter-item[data-tab='cottage'] table td:nth-child(5) {
+    padding-top: 15px;
+    font-size: 14pt;
+  }
+  .b-filter-item[data-tab='cottage'] table td:nth-child(5),
+  .b-filter-item[data-tab='cottage'] table td:nth-child(6),
+  .b-filter-item[data-tab='cottage'] table td:nth-child(7) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.b-filter-item[data-tab='duplex'] table th {
+  width: auto;
+}
+.b-filter-item[data-tab='duplex'] table th:nth-child(1),
+.b-filter-item[data-tab='duplex'] table th:nth-child(2),
+.b-filter-item[data-tab='duplex'] table th:nth-child(3) {
+  width: 11%;
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='duplex'] table th {
+    display: inline-block;
+  }
+  .b-filter-item[data-tab='duplex'] table th:nth-child(1),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(2),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(3),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(4) {
+    width: 25%;
+  }
+  .b-filter-item[data-tab='duplex'] table th:nth-child(5),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(6),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(7),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(8),
+  .b-filter-item[data-tab='duplex'] table th:nth-child(9) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='duplex'] table td {
+    display: inline-block;
+    width: 25%;
+  }
+  .b-filter-item[data-tab='duplex'] table td:nth-child(5) {
+    padding-top: 15px;
+  }
+  .b-filter-item[data-tab='duplex'] table td:nth-child(7) {
+    font-size: 14pt;
+  }
+  .b-filter-item[data-tab='duplex'] table td:nth-child(5),
+  .b-filter-item[data-tab='duplex'] table td:nth-child(6),
+  .b-filter-item[data-tab='duplex'] table td:nth-child(7),
+  .b-filter-item[data-tab='duplex'] table td:nth-child(8),
+  .b-filter-item[data-tab='duplex'] table td:nth-child(9) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.b-filter-item[data-tab='commercial'] table th,
+.b-filter-item[data-tab='commercial-estate'] table th {
+  width: auto;
+}
+.b-filter-item[data-tab='commercial'] table th:nth-child(1),
+.b-filter-item[data-tab='commercial-estate'] table th:nth-child(1),
+.b-filter-item[data-tab='commercial'] table th:nth-child(2),
+.b-filter-item[data-tab='commercial-estate'] table th:nth-child(2),
+.b-filter-item[data-tab='commercial'] table th:nth-child(3),
+.b-filter-item[data-tab='commercial-estate'] table th:nth-child(3) {
+  width: 17%;
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='commercial'] table th,
+  .b-filter-item[data-tab='commercial-estate'] table th {
+    display: inline-block;
+  }
+  .b-filter-item[data-tab='commercial'] table th:nth-child(1),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(1),
+  .b-filter-item[data-tab='commercial'] table th:nth-child(2),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(2),
+  .b-filter-item[data-tab='commercial'] table th:nth-child(3),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(3) {
+    width: 33.3%;
+  }
+  .b-filter-item[data-tab='commercial'] table th:nth-child(4),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(4),
+  .b-filter-item[data-tab='commercial'] table th:nth-child(5),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(5),
+  .b-filter-item[data-tab='commercial'] table th:nth-child(6),
+  .b-filter-item[data-tab='commercial-estate'] table th:nth-child(6) {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .b-filter-item[data-tab='commercial'] table td,
+  .b-filter-item[data-tab='commercial-estate'] table td {
+    display: inline-block;
+    width: 33.3%;
+  }
+  .b-filter-item[data-tab='commercial'] table td:nth-child(4),
+  .b-filter-item[data-tab='commercial-estate'] table td:nth-child(4) {
+    padding-top: 15px;
+    font-size: 14pt;
+  }
+  .b-filter-item[data-tab='commercial'] table td:nth-child(4),
+  .b-filter-item[data-tab='commercial-estate'] table td:nth-child(4),
+  .b-filter-item[data-tab='commercial'] table td:nth-child(5),
+  .b-filter-item[data-tab='commercial-estate'] table td:nth-child(5),
+  .b-filter-item[data-tab='commercial'] table td:nth-child(6),
+  .b-filter-item[data-tab='commercial-estate'] table td:nth-child(6) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+@media (min-width: 901px) {
+  .b-filter-item:not([data-tab]) table tbody tr {
+    display: table-row;
+    height: 65px;
+    padding-top: 0;
+  }
+}
+@media (max-width: 900px) {
+  .b-filter-item:not([data-tab]) table tbody tr {
+    display: block;
+    height: auto;
+    padding-top: 15px;
+  }
+}
+.b-filter-item:not([data-tab]) table th {
+  width: 11%;
+}
+.b-filter-item:not([data-tab]) table th:nth-child(6),
+.b-filter-item:not([data-tab]) table th:nth-child(7),
+.b-filter-item:not([data-tab]) table th:nth-child(8) {
+  width: auto;
+}
+@media (max-width: 900px) {
+  .b-filter-item:not([data-tab]) table th {
+    display: inline-block;
+    width: 20%;
+  }
+  .b-filter-item:not([data-tab]) table th:nth-child(6),
+  .b-filter-item:not([data-tab]) table th:nth-child(7),
+  .b-filter-item:not([data-tab]) table th:nth-child(8) {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .b-filter-item:not([data-tab]) table td {
+    display: inline-block;
+    width: 20%;
+  }
+  .b-filter-item:not([data-tab]) table td:nth-child(6) {
+    padding-top: 15px;
+  }
+  .b-filter-item:not([data-tab]) table td:nth-child(7) {
+    font-size: 14pt;
+  }
+  .b-filter-item:not([data-tab]) table td:nth-child(6),
+  .b-filter-item:not([data-tab]) table td:nth-child(7),
+  .b-filter-item:not([data-tab]) table td:nth-child(8) {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+.b-filter-btn--table {
+  position: absolute;
+  color: #cabb47;
+}
+@media (max-width: 768px) {
+  .b-filter-btn--table {
+    display: none !important;
+  }
+}

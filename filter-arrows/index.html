@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Цены | NN</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Ново-Никольское" />
+    <meta
+      property="og:description"
+      content="Масштабный жилой комплекс «Ново-Никольское» расположен в живописном районе Новой Москвы."
+    />
+    <meta
+      property="og:image"
+      content="http://nn-markup.2px.ruupload/gallery/1.jpg"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://nn-markup.2px.ru/pages/main/" />
+
+    <link rel="stylesheet" href="template/materialize.min.css" />
+    <link rel="stylesheet" href="template/placeholders/prices.css" />
+    <link rel="stylesheet" href="template/template_styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"
+    />
+    <link rel="stylesheet" href="template/plugin/jquery-ui.css" />
+    <link rel="stylesheet" href="template/plugin/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="components/filter/style.css" />
+  </head>
+  <body>
+    <header class="b-header">
+      <div class="b-header__ph">
+        <div class="b-header__ph-container container">
+          <div class="b-header__ph-logo">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="b-header__container">
+        <div class="container">
+          <a class="b-header__logo" href="/pages/main/"
+            ><img src="template/images/logo-nn.svg" alt="Ново-Никольское"
+          /></a>
+          <div id="bx_incl_area_2">
+            <div class="b-header__menu">
+              <a href="/pages/plan/">Генплан</a
+              ><a href="/pages/offers">Многоэтажные дома</a
+              ><a href="/pages/offers">Малоэтажные дома</a
+              ><a href="/pages/offers">Таунхаусы</a
+              ><a href="/pages/offers">Коттеджи</a
+              ><a href="/pages/offers">Дуплексы</a
+              ><a href="#panorama">Панорама</a><a href="#gallery">Галерея</a
+              ><a href="#docs">Документы</a><a href="#sale">Акции</a>
+            </div>
+          </div>
+          <div class="b-header__icons">
+            <div id="bx_incl_area_3">
+              <a
+                class="b-header__phone hide-on-small-only"
+                href="tel:+7 (495) 162-61-40"
+                >+7 (495) 162-61-40</a
+              >
+            </div>
+            <div
+              class="b-header__side-nav-icon sidenav-trigger"
+              style="background-image: url(template/images/menu.svg)"
+              data-target="sideNav"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="sidenav" id="sideNav">
+        <div class="b-sidenav-close"></div>
+        <a href="/pages/prices/">Цены</a><a href="/pages/hypothec/">Ипотека</a>
+        <hr />
+        <a href="/pages/prices/">Инфраструктура</a
+        ><a href="/pages/prices/">Расположение</a
+        ><a href="/pages/visual/">Панорама</a>
+        <hr />
+        <a href="/pages/docs/">Документы</a><a href="/pages/plan/">Генплан</a
+        ><a href="/pages/galleries/">Галерея</a
+        ><a href="/pages/prices/?type=highrise">Многоэтажные дома</a
+        ><a href="/pages/prices/?type=lowrise">Малоэтажные дома</a
+        ><a href="/pages/prices/?type=townhouse">Таунхаусы</a
+        ><a href="/pages/prices/?type=duplex">Дуплексы</a
+        ><a href="/pages/prices/?type=cottage">Коттеджи</a
+        ><a href="/pages/prices/?type=apartament">Квадрохаусы</a>
+        <a href="/pages/prices/?type=highrise">Коммерческая недвижимость</a>
+        <hr />
+        <a href="/pages/prices/">Ново-Никольская гимназия</a
+        ><a href="/pages/news/">Новости</a>
+        <hr />
+        <a class="b-sidenav-phone" href="tel:+7 (495) 162-61-40"
+          >+7 (495) 162-61-40</a
+        >
+        <hr />
+        <div class="b-sidenav__social">
+          <a href="" style="background-image: url('template/images/vk.svg')"></a
+          ><a
+            href=""
+            style="background-image: url('template/images/instagram.svg')"
+          ></a
+          ><a
+            href=""
+            style="background-image: url('template/images/facebook.svg')"
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <hr />
+      <h1>Все предложения</h1>
+    </div>
+    <section class="container" id="prices">
+      <div class="b-prices__ph">
+        <div class="b-prices__ph-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="b-prices__ph-cols">
+          <div class="b-prices__ph-filter"></div>
+          <div class="b-prices__ph-table"></div>
+        </div>
+      </div>
+      <!-- start components/filter/-->
+      <div class="b-filter">
+        <div class="b-tabs">
+          <div class="b-tabs__menu">
+            <div class="b-tabs__item i-active" data-tab="highrise">
+              Многоэтажные дома
+            </div>
+            <div class="b-tabs__item" data-tab="lowrise">Малоэтажные дома</div>
+            <div class="b-tabs__item" data-tab="townhouse">Таунхаусы</div>
+            <div class="b-tabs__item" data-tab="cottage">Коттеджи</div>
+            <div class="b-tabs__item" data-tab="duplex">Дуплексы</div>
+            <div class="b-tabs__item" data-tab="apartament">
+              Квартиры с отделкой
+            </div>
+          </div>
+          <hr class="i-size-L" />
+          <div class="b-tabs__tab b-filter-item i-active" data-tab="highrise">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-section-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-section-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Секция</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-section"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-floors-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-floors-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Этаж</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-floors"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Секция</th>
+                      <th>Этаж</th>
+                      <th>Номер квартиры</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-highrise.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="b-tabs__tab b-filter-item" data-tab="lowrise">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-floors-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-floors-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Этаж</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-floors"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Корпус</th>
+                      <th>Этаж</th>
+                      <th>Номер квартиры</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-lowrise.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="b-tabs__tab b-filter-item" data-tab="townhouse">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-land-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-land-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь з.у.(сот.)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-land"></div>
+                  </div>
+                  <p></p>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Номер квартиры</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Площадь з.у.</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-townhouse.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="b-tabs__tab b-filter-item" data-tab="cottage">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-land-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-land-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь з.у.(сот.)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-land"></div>
+                  </div>
+                  <p></p>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Площадь з.у.</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-cottage.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="b-tabs__tab b-filter-item" data-tab="duplex">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-land-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-land-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь з.у.(сот.)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-land"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-land-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-land-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Номер квартиры</th>
+                      <th>Этажей</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Площадь з.у.</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-duplex.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="b-tabs__tab b-filter-item" data-tab="apartament">
+            <div class="row">
+              <div class="col xl3 l4 m5 s12">
+                <div class="b-filter-btn">
+                  <span class="i-show">Использовать фильтр</span
+                  ><span>Свернуть фильтр</span
+                  ><i
+                    style="background-image: url('upload/icons/filter.svg')"
+                  ></i>
+                </div>
+                <div class="b-filter-body">
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-house-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-house-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>№ Дома</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-house"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-section-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-section-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Секция</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-section"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-floors-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-floors-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Этаж</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-floors"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-rooms-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-rooms-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Комнат</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-rooms"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter__input">
+                    <span>от</span>
+                    <input
+                      class="b-filter-square-input-min"
+                      type="text"
+                      value=""
+                    />
+                    <span>до</span>
+                    <input
+                      class="b-filter-square-input-max"
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                  <label>Площадь(м²)</label>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-square"></div>
+                  </div>
+                  <p></p>
+                  <label>Стоимость</label>
+                  <div class="b-filter-price-value"></div>
+                  <div class="b-filter__wrapper">
+                    <div class="b-filter-price"></div>
+                  </div>
+                  <p></p>
+                  <div class="b-filter-reset">Сбросить параметры</div>
+                </div>
+              </div>
+              <hr class="i-size-L show-on-small hide-on-med-and-up clearfix" />
+              <div class="col xl9 l8 m7 s12">
+                <table class="b-filter-table">
+                  <thead>
+                    <tr>
+                      <th>№ Дома</th>
+                      <th>Секция</th>
+                      <th>Этаж</th>
+                      <th>Номер квартиры</th>
+                      <th>Комнат</th>
+                      <th>Площадь</th>
+                      <th>Цена</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-orderlink="/form/?id="
+                    data-json="components/filter/filter-data-apartment.json"
+                    data-method="GET"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end components/filter/-->
+    </section>
+    <hr class="i-size-L" />
+    <section class="container" id="buildings">
+      <div class="b-buildings__ph">
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+        <div class="b-buildings__ph__item"></div>
+      </div>
+      <div class="b-buildings">
+        <a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/1.jpg')"
+          ><span>Многоэтажные дома</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/2.jpg')"
+          ><span>Малоэтажные дома</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/3.jpg')"
+          ><span>Таунхаусы</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/5.jpg')"
+          ><span>Дуплексы</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/6.jpg')"
+          ><span>Коттеджи</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/5.jpg')"
+          ><span>Паркинг</span></a
+        ><a
+          class="b-buildings__item"
+          href=""
+          style="background-image: url('upload/buildings/6.jpg')"
+          ><span>Коммерческие помещения</span></a
+        >
+      </div>
+    </section>
+    <hr class="i-size-L" />
+    <footer class="b-footer">
+      <div class="container">
+        <div class="b-footer__logo">
+          <img src="template/images/logo-nn.svg" alt="Ново-Никольское" />
+        </div>
+        <hr class="i-size-M" />
+        <div class="row">
+          <div class="col l3 m12 s12">
+            <menu>
+              <li><a href="">Инфраструктура</a></li>
+              <li><a href="">Инфраструктура</a></li>
+              <li><a href="">Инфраструктура</a></li>
+              <li><a href="">Инфраструктура</a></li>
+            </menu>
+          </div>
+          <div class="col l3 m12 s12">
+            <menu>
+              <li><a href="">Документы</a></li>
+              <li><a href="">Документы</a></li>
+              <li><a href="">Документы</a></li>
+            </menu>
+          </div>
+          <div class="col l3 m12 s12">
+            <menu>
+              <li><a href="">Многоэтажные дома</a></li>
+              <li><a href="">Многоэтажные дома</a></li>
+              <li><a href="">Многоэтажные дома</a></li>
+              <li><a href="">Многоэтажные дома</a></li>
+              <li><a href="">Многоэтажные дома</a></li>
+            </menu>
+          </div>
+          <hr class="show-on-small hide-on-med-and-up clearfix" />
+          <div class="col l3 m12 s12">
+            <div class="b-footer__social">
+              <span>Соц. сети</span>
+              <hr class="i-size-S" />
+              <a
+                href=""
+                style="background-image: url('template/images/vk.svg')"
+              ></a
+              ><a
+                href=""
+                style="background-image: url('template/images/instagram.svg')"
+              ></a
+              ><a
+                href=""
+                style="background-image: url('template/images/facebook.svg')"
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="b-footer__copyright">
+          <p>&copy; Новоникольское 2020 год.</p>
+          <p>
+            Официальный сайт жилого комплекса Ново-Никольское в Новой Москве.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="template/jquery-3.4.1.min.js"></script>
+    <script src="template/materialize.min.js"></script>
+    <script src="template/script.js"></script>
+
+    <script src="template/plugin/jquery-ui.js"></script>
+    <script src="template/plugin/jquery.ui.touch-punch.min.js"></script>
+    <script src="components/filter/script.js"></script>
+  </body>
+</html>
